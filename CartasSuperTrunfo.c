@@ -3,13 +3,13 @@
 int main (){
     //carta 1
     int populacao1,pontos_turisticos1;
-    float area1,pib1;
+    float area1,pib1,densidade1,pibcap1;
     char estado1,cidade1 [20], cartacode1 [20];
 
     //carta2
     int populacao2,pontos_turisticos2;
-    float area2,pib2;
-    char estado2,cidade2[20], cartacode2[20];
+    float area2,pib2,densidade2,pibcap2;
+    char estado2,cidade2[20], cartacode2[20];//não foi iniciado as variaveis pois não é nescéssario
 
     printf("Bem vindo ao super trunfo\n");
 
@@ -30,6 +30,9 @@ int main (){
     printf("Insetir quantitade de pontos turisticos\n");//pontos turisticos 1
     scanf("%d", &pontos_turisticos1);
 
+    pibcap1 = (float) pib1 / populacao1;
+    densidade1 = (float) area1 / populacao1;
+
     printf("Vamos para a segunda carta\n");//dados da carta 2
 
     printf("Insersir estado\n");//estado carta 2
@@ -46,6 +49,9 @@ int main (){
     scanf("%d", &populacao2);
     printf("Insetir quantitade de pontos turisticos\n");//pontos turisticos 2
     scanf("%d", &pontos_turisticos2);
+    
+    pibcap2 = pib2 / populacao2;
+    densidade2 = area2 / populacao2;
 
     //exibisao das cartas
 
@@ -54,18 +60,22 @@ int main (){
     printf("estado: %c\n", estado1);
     printf("cidade: %s\n", cidade1);
     printf("população: %d\n", populacao1);
-    printf("area: %.2f\n", area1);
+    printf("area: %.2f m²\n", area1);
     printf("PIB: %.2f B\n", pib1);
     printf("pontos turisticos: %d\n", pontos_turisticos1);
+    printf("PIB per capta: %.2f\n",pibcap1);
+    printf("densidade populacional: %.2f m²\n",densidade1);
 
     printf("\ncarta 2:\n");// exibição da primeira carta
     printf("codico: %s\n", cartacode2);
     printf("estado: %c\n", estado2);
     printf("cidade: %s\n", cidade2);
     printf("população: %d\n", populacao2);
-    printf("area: %.2f\n", area2);
+    printf("area: %.2f m²\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("pontos turisticos: %d\n", pontos_turisticos2);
+    printf("PIB per capta: %.2f\n",pibcap2);
+    printf("densidade populacional: %.2f m²\n",densidade2);
 
     return 0;
 
